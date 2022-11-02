@@ -3,10 +3,14 @@ from django.core.paginator import Paginator
 from ..models import Question
 from django.db.models import Q, Count
 
+import logging
+logger = logging.getLogger('pybo')
+
 # Create your views here.
 
 
 def index(request):
+    logger.info("INFO 레벨로 출력")
     # 입력 인자
     page = request.GET.get('page', '1')   # 페이지
     kw = request.GET.get('kw', '')        # 검색어
