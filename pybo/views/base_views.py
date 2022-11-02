@@ -11,7 +11,7 @@ def index(request):
     page = request.GET.get('page', '1')   # 페이지
     kw = request.GET.get('kw', '')        # 검색어
     so = request.GET.get('so', 'recent')  # 정렬 기준
-    3/0
+
     # 정렬
     if so == 'recommend':
         question_list = Question.objects.annotate(
